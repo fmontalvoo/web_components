@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vue</title>
+</head>
+
+<body>
+
+    <div id="productos">
+        <productos-component
+            v-for="(producto, index) in productos"
+            :key="index"
+            :imagen="producto.imagen"
+            :nombre="producto.nombre"
+            :precio="producto.precio"
+        ></productos-component>
+    </div>
+
+    <!-- <template id="producto">
+        <link rel="stylesheet" href="style.css">
+        <div>
+            <img width="128" :src="imagen" :alt="nombre" />
+            <h2>{{nombre}}</h2>
+            <h3>$ {{precio}}</h3>
+        </div>
+    </template> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="component.js"></script>
+</body>
+
+</html>
